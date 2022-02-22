@@ -6,10 +6,17 @@ const Cart = (props) => {
   const cartitems = (
     <ul>
       {[{ id: "c1", name: "sushi", price: 12.89 }].map((item) => 
-        <li>{item.name}</li>
+        <li key={item.id}>{item.name}</li>
       )}
     </ul>
   );
+
+  const onCloseHandler = (event) => {
+    event.preventDefault();
+    props.onHideCartHandler();
+  }
+
+  
 
   return (
     <Modal>
@@ -19,7 +26,7 @@ const Cart = (props) => {
         <span>19.99</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes["button--alt"]}>Close</button>
+        <button onClick={onCloseHandler} className={classes["button--alt"]}>Close</button>
         <button className={classes["button"]}>Order</button>
       </div>
     </Modal>
