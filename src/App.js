@@ -4,7 +4,7 @@ import Header from "./components/Layout/Header";
 import Cart from "./components/Cart/Cart";
 import Meals from "./components/Meals/Meals";
 
-import CartContextProvider from "./store/CartContext";
+import CartContextProvider from "./store/CartContextProvider";
 
 function App() {
   const [showCart, setShowCart] = useState(false);

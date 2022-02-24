@@ -1,23 +1,22 @@
 import React, {useContext} from "react";
 
-import CartContext from "../../store/CartContext";
-
 import classes from "./Cart.module.css";
 import Modal from "../UI/Modal";
 
 
 const Cart = (props) => {
 
-  const cartContext = useContext(CartContext);
-  
-  const cartitems = (
+  /* const cartContext = useContext(CartContext);
+   */
+  /* const cartitems = (
     <ul>
       {cartContext.cartItems.map((item) => 
         <li key={item.id}>{item.name}</li>
       )}
     </ul>
-  );
+  ); */
 
+  const cartitems = [];
   const onCloseHandler = (event) => {
     event.preventDefault();
     props.onHideCartHandler();
